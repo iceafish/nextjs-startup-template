@@ -1,0 +1,9 @@
+import { Startup } from "@/components/Startup";
+
+export default function Home() {
+  return (
+    <main>
+      <Startup />
+    </main>
+  );
+}
