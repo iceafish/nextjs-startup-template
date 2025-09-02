@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import { Lexend_Deca } from "next/font/google";
 import { ReactNode } from "react";
 import { ThemeProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
 import theme from "../common/theme";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
+import { ClientLayoutProvider } from "@/common/layout/ClientLayoutProvider";
 
 import "./globals.css";
 
@@ -28,7 +30,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${lexendDeca.className}`}>
         <AppRouterCacheProvider>
-          <ThemeProvider theme={theme}>{children}</ThemeProvider>
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <ClientLayoutProvider>{children}</ClientLayoutProvider>
+          </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
     </html>
