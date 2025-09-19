@@ -1,11 +1,12 @@
 "use client";
 
 import { FC, PropsWithChildren } from "react";
-
 import { SnackbarProvider } from "notistack";
-import { DialogsProvider } from "@toolpad/core";
-import { ConfirmProvider } from "material-ui-confirm";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import {
+  DialogProvider,
+  DialogRender,
+} from "@/components/StyledDialog/useDialog/provider";
 
 const queryClient = new QueryClient();
 
@@ -16,9 +17,10 @@ export const ClientLayoutProvider: FC<PropsWithChildren> = ({ children }) => {
         anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
         maxSnack={3}
       >
-        <DialogsProvider>
-          <ConfirmProvider>{children}</ConfirmProvider>
-        </DialogsProvider>
+        <DialogProvider>
+          {children}
+          <DialogRender />
+        </DialogProvider>
       </SnackbarProvider>
     </QueryClientProvider>
   );
