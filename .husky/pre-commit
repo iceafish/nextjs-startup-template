@@ -1,0 +1,8 @@
+# Run linting (only errors will block commit, warnings are ignored)
+yarn lint:errors-only
+
+# Run prettier check (show warnings but don't block commit)
+yarn format:check || echo "⚠️  Prettier formatting issues found, but commit is allowed. Run 'yarn format' to fix."
+
+# Run type checking
+yarn type-check

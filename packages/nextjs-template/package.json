@@ -1,0 +1,52 @@
+{
+  "name": "@startup/nextjs-template",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev:turbo": "next dev --turbopack",
+    "build": "next build",
+    "build:turbo": "next build --turbopack",
+    "start": "next start",
+    "lint": "eslint",
+    "lint:errors-only": "eslint --quiet"
+  },
+  "dependencies": {
+    "@emotion/cache": "^11.14.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.3.1",
+    "@mui/material": "^7.3.1",
+    "@mui/material-nextjs": "^7.3.0",
+    "@relia-fe/core": "workspace:*",
+    "@tanstack/react-query": "^5.85.6",
+    "@toolpad/core": "^0.16.0",
+    "ahooks": "^3.9.5",
+    "axios": "^1.12.2",
+    "dayjs": "^1.11.18",
+    "ethers": "^6.15.0",
+    "jotai": "^2.13.1",
+    "lodash-es": "^4.17.21",
+    "material-ui-confirm": "^4.0.0",
+    "next": "15.5.3",
+    "notistack": "^3.0.2",
+    "radash": "^12.1.1",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "swr": "^2.3.6",
+    "viem": "^2.37.7",
+    "wagmi": "^2.17.2"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/axios": "^0.14.4",
+    "@types/lodash-es": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.6",
+    "typescript": "^5"
+  },
+  "packageManager": "yarn@4.9.2"
+}
